@@ -6,7 +6,9 @@ export interface Fabric {
   tags?: string[];
   imageUrl: string;
   type?: string;
+  isFeatured?: boolean;
 }
+
 
 export interface Project {
   id: string;
