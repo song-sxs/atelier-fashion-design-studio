@@ -121,7 +121,8 @@ interface FabricCardProps {
   onClick: (fabric: Fabric) => void;
 }
 
-function FabricCard({ fabric, mode = "compact", onClick }: FabricCardProps) {
+// NOTE: 使用 React.FC 让 TypeScript 自动识别 key/ref 等 React 内建 props
+const FabricCard: React.FC<FabricCardProps> = ({ fabric, mode = "compact", onClick }) => {
   return (
     <motion.div
       layout
@@ -198,7 +199,7 @@ function FabricCard({ fabric, mode = "compact", onClick }: FabricCardProps) {
       )}
     </motion.div>
   );
-}
+};
 
 // ============================================
 // 新增面料表单弹窗
